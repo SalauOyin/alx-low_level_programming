@@ -1,25 +1,25 @@
 #include "main.h"
 
+
 /**
- * _strchr - prints found c
- * @s: pointer to char
- * @c: char params to found
- * Return: *S
+* _memcpy - function that copies memory area.
+*
+*@dest: destination address
+*@src: source address
+*@n: size of bytes to copy
+*Return: destination
 */
 
-char *_strchr(char *s, char c)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	while (*s != '\0')
+
+	unsigned int count = 0;
+
+	for (count = 0; count < n; count++)
 	{
-		if (*s == c)
-		{
-			return (s);
-		}
-		s++;
+		*(dest + count) = *(src + count);
 	}
-	if (*s == c)
-	{
-		return (s);
-	}
-return (0);
+
+	return (dest);
+
 }
